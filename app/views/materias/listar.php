@@ -1,16 +1,26 @@
 <?php
-require_once __DIR__ . '/../../models/Materia.php';
+declare(strict_types=1);
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require_once __DIR__ . '/../../config/database.php';
+require_once __DIR__ . '/../../helper/session_helper.php';
+require_once __DIR__ . '/../../helper/auth_helper.php';
+require_once __DIR__ . '/../../models/Materia.php';
+
+exigirSesionActiva();
+exigirRol('Administrador');
 
 $materiaModel = new Materia($pdo);
 $materias = $materiaModel->listar();
 
-// Agrupamos las materias por nivel educativo
 $agrupadas = [];
 foreach ($materias as $m) {
     $agrupadas[$m['nivel']][] = $m;
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">

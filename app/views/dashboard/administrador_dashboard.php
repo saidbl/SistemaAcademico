@@ -225,6 +225,12 @@ h2 {
       <h3>Reportes y Control</h3>
       <p>Genera constancias, informes de calificaciones y asistencias.</p>
     </a>
+
+    <a class="card" href="../asignacion/automatica.php">
+      <i class="fa-solid fa-book-open"></i>
+      <h3>Mis Materias</h3>
+      <p>Consulta materias y grupos asignados.</p>
+    </a>
   </section>
 
   <div class="footer">
