@@ -231,6 +231,12 @@ h2 {
       <h3>Mis Materias</h3>
       <p>Consulta materias y grupos asignados.</p>
     </a>
+    <a class="card" href="/SistemaAcademico/app/views/reinscripciones/index.php">
+  <i class="fa-solid fa-repeat"></i>
+  <h3>Reinscripciones e Inscripciones</h3>
+  <p>Ejecutar RF-025 al RF-029 según reglas del sistema.</p>
+</a>
+
   </section>
 
   <div class="footer">
