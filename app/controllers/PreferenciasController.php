@@ -21,6 +21,6 @@ $stmt = $pdo->prepare("
 
 $stmt->execute([$id_docente, $continuidad, $carga, $nivel]);
 
-header("Location: ../views/docentes/preferencias.php?ok=1");
+header("Location: ../views/docente/preferencias.php?ok=1");
 exit;
 ?>

@@ -237,7 +237,7 @@ h2 {
       <p>Verifica tu registro de asistencias, retardos y ausencias.</p>
     </a>
 
-    <a class="card" href="/SistemaAcademico/app/views/perfil/perfil_alumno.php">
+    <a class="card" href="/SistemaAcademico/app/views/alumno/perfil_alumno.php">
       <i class="fa-solid fa-id-card"></i>
       <h3>Mi perfil</h3>
       <p>Actualiza tus datos de contacto y revisa tu información personal.</p>

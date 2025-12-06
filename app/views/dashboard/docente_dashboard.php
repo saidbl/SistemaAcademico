@@ -214,25 +214,25 @@ h2 {
   <!-- ACCESOS RÁPIDOS -->
   <section class="cards">
 
-    <a class="card" href="#">
+    <a class="card" href="/SistemaAcademico/app/views/docente/mis_materias.php">
       <i class="fa-solid fa-book-open"></i>
       <h3>Mis Materias</h3>
       <p>Consulta materias y grupos asignados.</p>
     </a>
 
-    <a class="card" href="#">
+    <a class="card" href="/SistemaAcademico/app/views/docente/capturar_calificaciones.php">
       <i class="fa-solid fa-pen-to-square"></i>
       <h3>Calificaciones</h3>
       <p>Captura y consulta calificaciones.</p>
     </a>
 
-    <a class="card" href="#">
+    <a class="card" href="/SistemaAcademico/app/views/docente/tomar_asistencia.php">
       <i class="fa-solid fa-calendar-check"></i>
       <h3>Asistencia</h3>
       <p>Registro diario por grupo.</p>
     </a>
 
-    <a class="card" href="../docentes/preferencias.php">
+    <a class="card" href="../docente/preferencias.php">
       <i class="fa-solid fa-list-check"></i>
       <h3>Preferencias Docentes</h3>
       <p>Indica tus preferencias de carga académica.</p>
