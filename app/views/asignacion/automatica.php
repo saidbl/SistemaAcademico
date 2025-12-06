@@ -171,16 +171,28 @@ async function cargarHorario() {
     const data = await res.json();
 
     document.getElementById("horario").style.display = "block";
-    document.getElementById("tituloHorario").innerText = "Horario de " + data.grupo;
+    document.getElementById("tituloHorario").innerText = "Horario de " + data.grupo + " (" + data.turno + ")";
 
-    // BLOQUES FIJOS
-    const bloques = [
-        "07:00 - 08:30",
-        "08:30 - 10:00",
-        "10:30 - 12:00",
-        "12:00 - 13:30",
-        "13:30 - 15:00"
-    ];
+    // BLOQUES DEPENDEN DEL TURNO
+    let bloques;
+
+    if (data.turno === "Vespertino") {
+        bloques = [
+            "15:00 - 16:30",
+            "16:30 - 18:00",
+            "18:00 - 19:00",
+            "19:00 - 20:30",
+            "20:30 - 22:00"
+        ];
+    } else {
+        bloques = [
+            "07:00 - 08:30",
+            "08:30 - 10:00",
+            "10:30 - 12:00",
+            "12:00 - 13:30",
+            "13:30 - 15:00"
+        ];
+    }
 
     const dias = ["Lunes","Martes","Miercoles","Jueves","Viernes"];
 

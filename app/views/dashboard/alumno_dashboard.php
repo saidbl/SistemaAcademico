@@ -163,7 +163,7 @@ h2 {
   </div>
   <nav>
     <!-- Ajusta las rutas según tus vistas reales -->
-    <a href="/SistemaAcademico/app/views/asignacion/horarioAlumno.php">
+    <a href="/SistemaAcademico/app/views/alumno/horarioAlumnoData.php">
       <i class="fa-solid fa-calendar-days"></i> Mi horario
     </a>
     <a href="/SistemaAcademico/app/views/materias/mis_materias.php">
@@ -213,19 +213,19 @@ h2 {
 
   <!-- 🔹 Accesos rápidos del alumno -->
   <section class="cards">
-    <a class="card" href="/SistemaAcademico/app/views/asignacion/horarioAlumno.php">
+    <a class="card" href="/SistemaAcademico/app/views/alumno/horarioAlumno.php">
       <i class="fa-solid fa-calendar-days"></i>
       <h3>Ver mi horario</h3>
       <p>Consulta tus clases por día, bloque y docente asignado.</p>
     </a>
 
-    <a class="card" href="/SistemaAcademico/app/views/materias/mis_materias.php">
+    <a class="card" href="/SistemaAcademico/app/views/alumno/misMateriasHistorico.php">
       <i class="fa-solid fa-book-open"></i>
       <h3>Mis materias</h3>
       <p>Revisa las materias en las que estás inscrito este ciclo.</p>
     </a>
 
-    <a class="card" href="/SistemaAcademico/app/views/calificaciones/mis_calificaciones.php">
+    <a class="card" href="/SistemaAcademico/app/views/alumno/misCalificaciones.php">
       <i class="fa-solid fa-file-pen"></i>
       <h3>Mis calificaciones</h3>
       <p>Consulta tus calificaciones parciales y finales por materia.</p>
