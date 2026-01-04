@@ -242,6 +242,13 @@ h2 {
       <h3>Mi perfil</h3>
       <p>Actualiza tus datos de contacto y revisa tu información personal.</p>
     </a>
+
+    <a class="card" href="/SistemaAcademico/app/views/reportes/alumno.php">
+      <i class="fa-solid fa-file-pdf"></i>
+      <h3>Mis reportes</h3>
+      <p>Descarga tu kardex, boleta y constancia en formato PDF.</p>
+    </a>
+
   </section>
 
   <div class="footer">

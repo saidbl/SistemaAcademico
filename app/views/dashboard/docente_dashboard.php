@@ -237,6 +237,18 @@ h2 {
       <h3>Preferencias Docentes</h3>
       <p>Indica tus preferencias de carga académica.</p>
     </a>
+    <a class="card" href="/SistemaAcademico/app/views/docente/perfil_docente.php">
+  <i class="fa-solid fa-id-card"></i>
+  <h3>Mi Perfil</h3>
+  <p>Consulta y actualiza tu información personal.</p>
+</a>
+
+<a class="card" href="/SistemaAcademico/app/views/reportes/docente.php">
+  <i class="fa-solid fa-file-pdf"></i>
+  <h3>Reportes</h3>
+  <p>Genera reportes asignados por la administración.</p>
+</a>
+
 
   </section>
 

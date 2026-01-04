@@ -88,7 +88,7 @@ h2{color:#002e5b;font-size:1.6em;margin-bottom:20px;}
         <td><?=$g['turno']?></td>
         <td><?=$g['cupo_maximo']?></td>
         <td>
-          <a class="btn green" href="/SistemaAcademico/routes/web.php?r=admin/grupos/editar&id=<?=$g['id_grupo']?>">Editar</a>
+          <a class="btn green" href="editar.php?id=<?=$g['id_grupo']?>">Editar</a>
           <form style="display:inline" action="/SistemaAcademico/app/controllers/GrupoController.php" method="POST"
                 onsubmit="return confirm('¿Eliminar este grupo?');">
             <input type="hidden" name="accion" value="eliminar">

@@ -138,33 +138,24 @@ class Usuario {
     $stmt->execute([$id]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
-
-public function actualizar(array $d): void {
-    $sql = "UPDATE usuarios 
-            SET nombre = :nombre,
-                apellido_paterno = :ap,
-                apellido_materno = :am,
-                correo_institucional = :correo,
-                tipo_usuario = :tipo,
-                estatus = :estatus
-            WHERE id_usuario = :id";
-
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->execute([
-        ':nombre'  => $d['nombre'],
-        ':ap'      => $d['apellido_paterno'],
-        ':am'      => $d['apellido_materno'] ?? null,
-        ':correo'  => $d['correo_institucional'],
-        ':tipo'    => $d['tipo_usuario'],
-        ':estatus' => $d['estatus'],
-        ':id'      => $d['id_usuario']
+public function actualizar($data) {
+    $sql = "UPDATE usuarios SET
+            nombre = ?,
+            apellido_paterno = ?,
+            apellido_materno = ?,
+            correo_institucional = ?,
+            tipo_usuario = ?,
+            estatus = ?
+            WHERE id_usuario = ?";
+    return $this->pdo->prepare($sql)->execute([
+        $data['nombre'],
+        $data['apellido_paterno'],
+        $data['apellido_materno'],
+        $data['correo_institucional'],
+        $data['tipo_usuario'],
+        $data['estatus'],
+        $data['id_usuario']
     ]);
-
-    if (!empty($d['contrasena'])) {
-        $hash = password_hash($d['contrasena'], PASSWORD_BCRYPT);
-        $u = $this->pdo->prepare("UPDATE usuarios SET contrasena_hash = ? WHERE id_usuario = ?");
-        $u->execute([$hash, $d['id_usuario']]);
-    }
 }
 
 public function eliminar(int $id): void {
@@ -225,6 +216,7 @@ public function reiniciarIntentos($id_usuario) {
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute(['id' => $id_usuario]);
 }
+
 
 }
 ?>

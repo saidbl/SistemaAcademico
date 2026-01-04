@@ -220,10 +220,10 @@ h2 {
       <h3>Gestión de Materias</h3>
       <p>Agrega, edita y administra el plan de estudios y asignaturas.</p>
     </a>
-    <a class="card" href="#">
+    <a class="card" href="/SistemaAcademico/app/views/reportes/ver.php">
       <i class="fa-solid fa-file-lines"></i>
       <h3>Reportes y Control</h3>
-      <p>Genera constancias, informes de calificaciones y asistencias.</p>
+      <p>Consulta reportes asignados según tu rol.</p>
     </a>
 
     <a class="card" href="../asignacion/automatica.php">
@@ -231,11 +231,22 @@ h2 {
       <h3>Mis Materias</h3>
       <p>Consulta materias y grupos asignados.</p>
     </a>
+    <a class="card" href="/SistemaAcademico/app/views/perfil/index.php">
+    <i class="fa-solid fa-id-card"></i>
+    <h3>Mi Perfil</h3>
+    <p>Consulta y actualiza tu información personal.</p>
+    </a>
     <a class="card" href="/SistemaAcademico/app/views/reinscripciones/index.php">
   <i class="fa-solid fa-repeat"></i>
-  <h3>Reinscripciones e Inscripciones</h3>
-  <p>Ejecutar RF-025 al RF-029 según reglas del sistema.</p>
+  <h3>Reinscripciones</h3>
+    <p>Gestiona las reinscripciones del sistema.</p>
 </a>
+<a class="card" href="/SistemaAcademico/app/views/reportes/administrar.php">
+    <i class="fa-solid fa-id-card"></i>
+    <h3>Control de Reportes</h3>
+    <p>Consulta y actualiza tu información personal.</p>
+    </a>
+
 
   </section>
 

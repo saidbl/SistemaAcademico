@@ -201,7 +201,7 @@ h2 {
           <td><?= htmlspecialchars($u['correo_institucional']) ?></td>
           <td><?= $u['estatus'] ?></td>
           <td>
-            <a class="btn green sm" href="/SistemaAcademico/routes/web.php?r=admin/usuarios/editar&id=<?= $u['id_usuario'] ?>">
+            <a class="btn green sm" href="editar.php?id=<?= $u['id_usuario'] ?>">
               <i class="fa-solid fa-pen-to-square"></i> Editar
             </a>
             <form style="display:inline" action="/SistemaAcademico/app/controllers/UsuarioController.php" method="POST"
