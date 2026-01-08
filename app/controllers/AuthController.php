@@ -31,10 +31,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         }
 
+        // 🔐 CLAVE: token + session_id
         $token = bin2hex(random_bytes(32));
-        $usuarioModel->actualizarSesion($usuario['id_usuario'], $token);
+        $sessionPhpId = session_id();
+
+        // 🔥 ACTUALIZA AMBOS EN BD
+        $sql = "UPDATE usuarios 
+                SET token_sesion = ?, session_php_id = ?, ultimo_login = NOW()
+                WHERE id_usuario = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$token, $sessionPhpId, $usuario['id_usuario']]);
+
         $usuarioModel->reiniciarIntentos($usuario['id_usuario']);
 
+        // SESIÓN
         $_SESSION['usuario_id'] = $usuario['id_usuario'];
         $_SESSION['usuario_nombre'] = $usuario['nombre'] . " " . $usuario['apellido_paterno'];
         $_SESSION['tipo_usuario'] = $usuario['tipo_usuario'];
@@ -60,7 +70,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
 
     } else {
-        $sql = "SELECT id_usuario FROM usuarios WHERE (boleta = :identificador OR numero_empleado = :identificador)";
+        $sql = "SELECT id_usuario FROM usuarios 
+                WHERE (boleta = :identificador OR numero_empleado = :identificador)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['identificador' => $identificador]);
         $u = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -77,4 +88,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: ../../index.php");
     exit();
 }
-?>

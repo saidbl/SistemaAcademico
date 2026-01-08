@@ -2,9 +2,11 @@
 session_start();
 require_once __DIR__ . '/../../helper/session_helper.php';
 require_once __DIR__ . '/../../helper/auth_helper.php';
+require_once __DIR__ . '/../../middlewares/verificar_sesion.php';
 exigirSesionActiva();
 exigirRol('Administrador');
 require_once __DIR__ . '/../../config/database.php';
+
 
 // Estadísticas rápidas
 $usuarios = $pdo->query("SELECT COUNT(*) FROM usuarios")->fetchColumn();
