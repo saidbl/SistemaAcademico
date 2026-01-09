@@ -250,6 +250,12 @@ h2 {
       <p>Descarga tu kardex, boleta y constancia en formato PDF.</p>
     </a>
 
+    <a class="card" href="/SistemaAcademico/app/views/reinscripcion/alumno.php">
+      <i class="fa-solid fa-clipboard-check"></i>
+      <h3>Mi Reinscripcion</h3>
+      <p>Reincribete al siguiente periodo</p>
+    </a>
+
   </section>
 
   <div class="footer">
